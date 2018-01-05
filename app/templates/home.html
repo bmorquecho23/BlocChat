@@ -1,34 +1,36 @@
-<div class="page">
-  <div class="wrapper">
+<main class="container-fluid" ng-app="blocChat">
+  <div class="row">
+        <section class = "col-sm-3 sidebar">
 
-     <div class="content-wrapper"
-      <main class="content">
+          <h1>Bloc Chat</h1>
+
+          <div ng-controller="ModalCtrl as modal">
+            <button type="button" ng-click="modal.open()">
+              New Room
+            </button>
+          </div>
+
+          <ul ng-repeat="room in home.Rooms">
+
+            <li ng-click="home.selectRoom(room)">
+                {{ room.$value }}
+              </li>
+            </ul>
+
+        </section>
+        <section class ="col-sm-9 chatroom">
           <h1>{{home.currentRoom.$value}}</h1>
-        <div class="message-content" ng-repeat="message in home.messages">
-          <h5>{{message.username}}:</h5>
-          <h6>{{message.sentAt}}</h6>
-          <h4>{{message.content}}</h4>
-
-       </div>
-    </main>
-    </div>
-    <section class = "sidebar">
-
-      <h1>Bloc Chat</h1>
-
-      <div ng-controller="ModalCtrl as modal">
-        <button type="button" ng-click="modal.open()">
-          New Room
-        </button>
-      </div>
-
-      <ul ng-repeat="room in home.Rooms">
-
-        <li ng-click="home.selectRoom(room)">
-            {{ room.$value }}
-          </li>
-        </ul>
-
+        <table class="table" ng-show"currentRoom">
+          <tbody>
+            <tr ng-repeat="message in home.messages">
+              <td class="message">
+                <p class = "username"> {{message.username}}:</p>
+                <p class = "content"> {{message.content}}</p>
+                <td class = "sent-at">{{message.sentAt}}</td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
-</div>
+</main>

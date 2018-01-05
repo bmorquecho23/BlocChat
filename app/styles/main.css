@@ -6,39 +6,36 @@ body {
   text-align: center;
 }
 
-.content-wrapper {
-  float:right;
-  width: 100%;
+.chatroom {
+  height: 100vh;
+  background-color: #fafafa;
+  padding: 1rem;
+  position: fixed;
+  padding-left: 20vh;
+}
+.chatroom h1{
   text-transform: capitalize;
 }
-.message-content{
-  float:right;
+.message{
   width: 80%;
   text-transform: capitalize;
   background-color: #fafafa;
 }
-
-.message-content h6{
-  float:right;
+.username {
+  text-align: left;
+  font-weight: bold;
 }
-
-.message-content h4{
-  float:left;
-  padding-left: 1%;
+.content{
+  text-align: left;
 }
-.message-content h5{
-  float:left;
+.sent-at{
+  font-style: italic;
 }
-
 .sidebar {
-  position: relative;
   width: 20%;
-  margin-right: -200px;
-  float: left;
-  overflow: hidden;
-  background: #A9A9A0;
+  height: 100vh;
+  background: #979aa0;
   color: #000000;
-  min-height: 600px;
 }
 .sidebar h1{
   text-align: center;
@@ -46,7 +43,7 @@ body {
 .sidebar li {
    text-align: left;
    text-transform: capitalize;
-   background-color: #A9A9A0;
+   background-color: #979aa0;
    padding-top: 1vh;
    padding-bottom: 1vh;
 }
