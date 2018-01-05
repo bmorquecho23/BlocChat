@@ -1,0 +1,34 @@
+<div class="page">
+  <div class="wrapper">
+
+     <div class="content-wrapper"
+      <main class="content">
+          <h1>{{home.currentRoom.$value}}</h1>
+        <div class="message-content" ng-repeat="message in home.messages">
+          <h5>{{message.username}}:</h5>
+          <h6>{{message.sentAt}}</h6>
+          <h4>{{message.content}}</h4>
+
+       </div>
+    </main>
+    </div>
+    <section class = "sidebar">
+
+      <h1>Bloc Chat</h1>
+
+      <div ng-controller="ModalCtrl as modal">
+        <button type="button" ng-click="modal.open()">
+          New Room
+        </button>
+      </div>
+
+      <ul ng-repeat="room in home.Rooms">
+
+        <li ng-click="home.selectRoom(room)">
+            {{ room.$value }}
+          </li>
+        </ul>
+
+      </section>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+html, body {
+   height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.content-wrapper {
+  float:right;
+  width: 100%;
+  text-transform: capitalize;
+}
+.message-content{
+  float:right;
+  width: 80%;
+  text-transform: capitalize;
+  background-color: #fafafa;
+}
+
+.message-content h6{
+  float:right;
+}
+
+.message-content h4{
+  float:left;
+  padding-left: 1%;
+}
+.message-content h5{
+  float:left;
+}
+
+.sidebar {
+  position: relative;
+  width: 20%;
+  margin-right: -200px;
+  float: left;
+  overflow: hidden;
+  background: #A9A9A0;
+  color: #000000;
+  min-height: 600px;
+}
+.sidebar h1{
+  text-align: center;
+}
+.sidebar li {
+   text-align: left;
+   text-transform: capitalize;
+   background-color: #A9A9A0;
+   padding-top: 1vh;
+   padding-bottom: 1vh;
+}
